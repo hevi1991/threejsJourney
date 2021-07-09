@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* 让页面拖不出视窗 */
+    overflow: hidden;
+}
+
+canvas {
+    /* outline 取消focus的边框 */
+    outline: none;
+}
