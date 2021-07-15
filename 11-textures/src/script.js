@@ -38,6 +38,7 @@ const roughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
 // colorTexture.center.y = 0.5;
 
 // https://threejs.org/docs/index.html?q=texture#api/zh/textures/Texture
+// 在三维计算机图形的贴图渲染中有一个常用的技术被称为Mipmapping。为了加快渲染速度和减少图像锯齿，贴图被处理成由一系列被预先计算和优化过的图片组成的文件,这样的贴图被称为 MIP map 或者 mipmap。
 // colorTexture.minFilter = THREE.NearestFilter; // minFilter
 colorTexture.magFilter = THREE.NearestFilter; // 更加锐利
 
