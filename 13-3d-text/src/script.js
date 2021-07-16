@@ -53,7 +53,7 @@ fontLoader.load(fontPath, (font) => {
     const text = new THREE.Mesh(textGeometry, textMaterial);
     scene.add(text);
 
-    const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
+    const donutGeometry = new THREE.TorusGeometry(0.3, 0.1, 20, 45);
     const donutMaterial = textMaterial;
 
     console.time("dounts");
