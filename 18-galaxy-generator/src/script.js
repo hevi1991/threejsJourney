@@ -59,14 +59,14 @@ const generateGalaxy = () => {
         const radius = Math.random() * parameters.radius; // 粒子广度
         const spinAngle = radius * parameters.spin; // 每支粒子旋转度
         const branchAngle =
-            ((i % parameters.branches) / parameters.branches) * Math.PI * 2; // 每个分支的夹角的圆周率
+            ((i % parameters.branches) / parameters.branches) * Math.PI * 2; // 这个粒子的xyz坐标分配到分支夹角圆周率
 
         // 粒子分散程度
         // const randomX = (Math.random() - 0.5) * parameters.randomness;
         // const randomY = (Math.random() - 0.5) * parameters.randomness;
         // const randomZ = (Math.random() - 0.5) * parameters.randomness;
 
-        // 通过Math.pow取小数平方，得到数值指数曲线，让粒子越靠近中心，越集中
+        // 通过Math.pow取小数平方，得到数值指数曲线，让粒子越靠近线Math.cos(branchAngle + spinAngle) * radius，粒子越集中
         const randomX =
             Math.pow(Math.random(), parameters.randomnessPower) *
             (Math.random() > 0.5 ? 1 : -1);
